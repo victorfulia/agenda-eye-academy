@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,tsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ["Plus Jakarta Sans"],
+    },
   },
   plugins: [],
 };
