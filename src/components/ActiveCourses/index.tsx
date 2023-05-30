@@ -8,11 +8,10 @@ import IconClock from "../../assets/imgs/icon-clock.png";
 // Components
 import Counter from "../Counter";
 
-
 const ActiveCourses: React.FC = () => {
   return (
     <div>
-      <img src={Banner} className="w-full mt-2 absolute" alt="banner" />
+      <img src={Banner} className="md:w-full w-[1300px] h-[900px] md:h-auto mt-2 absolute" alt="banner" />
       <div className="w-full pt-8 absolute flex-col px-8">
         <div className="mt-20 max-w-[630px]">
           <span className="not-italic font-bold text-5xl text-white leading-6">
@@ -54,15 +53,15 @@ const ActiveCourses: React.FC = () => {
           </a>
         </div>
 
-        <div className="absolute right-0 -mt-32">
-          <div className="flex">
-            <div className="backdrop-blur-md backdrop-opacity-6 rounded-[2000px]">
+        <div className="absolute right-0 md:-mt-32 px-4">
+          <div className="flex ml-1">
+            <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 px-3">
               <span className="flex p-3 not-italic font-normal text-sm leading-4 text-white">
                 <img src={IconCalendar} className="mr-2" alt="icon-calendar" />
                 De 26 a 28 de Maio
               </span>
             </div>
-            <div className="backdrop-blur-md backdrop-opacity-6 rounded-[2000px]">
+            <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] px-3">
               <span className="flex p-3 not-italic font-normal text-sm leading-4 text-white">
                 <img src={IconClock} className="mr-2" alt="icon-clock" />
                 08 Horas
@@ -70,7 +69,7 @@ const ActiveCourses: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex">
+          <div className="flex flex-wrap">
             <Counter title="Dias" value="0" />
             <Counter title="Horas" value="0" />
             <Counter title="Minutos" value="0" />
