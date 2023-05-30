@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
+import Home from "./screens/Home";
 
 const App: React.FC = () => {
   return (
     <div className="h-screen">
-      <Header />
+      <Home />
     </div>
   );
 };
