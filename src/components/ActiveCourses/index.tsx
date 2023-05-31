@@ -1,7 +1,6 @@
 import React from "react";
 
 // Assets
-import Banner from "../../assets/imgs/banner.png";
 import IconCalendar from "../../assets/imgs/icon-calendar.png";
 import IconClock from "../../assets/imgs/icon-clock.png";
 
@@ -10,9 +9,8 @@ import Counter from "../Counter";
 
 const ActiveCourses: React.FC = () => {
   return (
-    <div>
-      <img src={Banner} className="md:w-full w-[1300px] h-[900px] md:h-auto mt-2 absolute" alt="banner" />
-      <div className="w-full pt-8 absolute flex-col px-8">
+    <div className="bg-[url('/src/assets/imgs/banner.png')] md:w-full w-[1300px] h-[900px] md:h-[650px] mt-2">
+      <div className="w-full pt-8 flex-col px-8">
         <div className="mt-20 max-w-[630px]">
           <span className="not-italic font-bold text-5xl text-white leading-6">
             Barman: Como preparar e criar bebidas
@@ -53,7 +51,7 @@ const ActiveCourses: React.FC = () => {
           </a>
         </div>
 
-        <div className="absolute right-0 md:-mt-32 px-4">
+        <div className="absolute right-0 mt-12 md:-mt-32 px-4">
           <div className="flex ml-1">
             <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 px-3">
               <span className="flex p-3 not-italic font-normal text-sm leading-4 text-white">

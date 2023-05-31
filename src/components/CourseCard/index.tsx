@@ -8,15 +8,15 @@ import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
 
 const CourseCard: React.FC = () => {
   return (
-    <div className="flex items-center justify-center">
-      <img src={Card} className="m-2 absolute" alt="card" />
+    <div className="flex items-center justify-center mb-32">
+      <img src={Card} className="m-2" alt="card" />
 
-      <div className="bg-[#FFCE59] rounded-t-[20px] p-4 py-6 absolute mt-[85px] mr-[195px]">
+      <div className="bg-[#FFCE59] rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px]">
         <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
           Academia
         </span>
       </div>
-      <div className="w-[285px] h-48 flex-col absolute bg-white rounded-[20px] mt-72 shadow-xl p-4">
+      <div className="w-[285px] h-48 flex-col bg-white rounded-[20px] shadow-xl p-4 absolute mt-[400px]">
         <div className="flex items-center">
           <span className="not-italic font-semibold text-base leading-5 text-black">
             Treino de Bíceps e Tríceps
