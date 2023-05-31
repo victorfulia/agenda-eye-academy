@@ -5,7 +5,7 @@ import CourseCard from "../CourseCard";
 
 const CoursesSchedule: React.FC = () => {
   return (
-    <div className="w-full pt-8 flex-col px-8 absolute">
+    <div className="w-full pt-8 flex-col px-8">
       <div className="mt-20 flex justify-center items-center">
         <span className="not-italic font-medium text-5xl text-black leading-6">
           Agenda de cursos online

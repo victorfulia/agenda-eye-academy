@@ -1,4 +1,6 @@
 import React from "react";
+
+// Assets
 import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.png";
 import BarraAgenda from "../../assets/imgs/barra-agenda.png";
 import IconArrowRight from "../../assets/imgs/icon-arrow-right.png";
