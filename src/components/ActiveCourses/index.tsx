@@ -12,7 +12,7 @@ const ActiveCourses: React.FC = () => {
     <div className="bg-[url('/src/assets/imgs/banner.png')] md:w-full w-full h-[900px] md:h-[650px] mt-2">
       <div className="w-full pt-8 flex-col px-8 mx-auto max-w-screen-xl">
         <div className="mt-20 max-w-[630px]">
-          <span className="not-italic font-bold text-5xl text-white leading-6">
+          <span className="not-italic font-bold text-5xl text-white leading-9">
             Barman: Como preparar e criar bebidas
           </span>
         </div>
