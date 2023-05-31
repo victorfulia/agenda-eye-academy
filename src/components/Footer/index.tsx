@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:gap-2 sm:grid-cols-1 pr-8">
+          <div className="grid sm:grid-cols-1 pr-8">
             <div>
               <h2 className="not-italic font-medium text-3xl leading-9 text-white">
                 Ainda tens dúvidas?
