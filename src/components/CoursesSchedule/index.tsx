@@ -1,13 +1,13 @@
 import React from "react";
 import CourseCard from "../CourseCard";
-
-// Components
+import { useData } from "../../context/data";
 
 const CoursesSchedule: React.FC = () => {
+  const { cards } = useData();
   return (
-    <div className="w-full pt-8 flex-col px-8 absolute">
+    <div className="w-full pt-8 flex-col px-8">
       <div className="mt-20 flex justify-center items-center">
-        <span className="not-italic font-medium text-5xl text-black leading-6">
+        <span className="not-italic font-medium text-5xl text-black leading-9">
           Agenda de cursos online
         </span>
       </div>
@@ -21,12 +21,9 @@ const CoursesSchedule: React.FC = () => {
 
       <div className="px-4 mt-12">
         <div className="flex flex-wrap justify-center">
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
+          {cards?.map((item, index) => {
+            return <CourseCard {...item} key={index} />;
+          })}
         </div>
       </div>
     </div>

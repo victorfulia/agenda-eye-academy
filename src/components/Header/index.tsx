@@ -1,4 +1,6 @@
 import React from "react";
+
+// Assets
 import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.png";
 import BarraAgenda from "../../assets/imgs/barra-agenda.png";
 import IconArrowRight from "../../assets/imgs/icon-arrow-right.png";
@@ -8,7 +10,7 @@ const Header: React.FC = () => {
   return (
     <div>
       <header>
-        <nav className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 px-4 lg:px-6 py-2.5">
+        <nav className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 px-4 lg:px-6 py-8">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="https://" className="flex items-center">
               <img
@@ -20,11 +22,11 @@ const Header: React.FC = () => {
             <div className="flex items-center lg:order-2">
               <a
                 href="#www."
-                className="flex items-center bg-[#FF7112] rounded-[2000px] px-4 py-1 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
+                className="flex items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
               >
                 <img
                   src={IconArrowRight}
-                  className="mr-2 h-2"
+                  className="mr-2"
                   alt="icon-arrow-right"
                 />
                 Contactos
