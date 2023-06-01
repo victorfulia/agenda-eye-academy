@@ -4,16 +4,7 @@ import React from "react";
 import IconDarkCalendar from "../../assets/imgs/icon-dark-calendar.png";
 import IconDarkClock from "../../assets/imgs/icon-dark-clock.png";
 import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
-
-interface Icard {
-  title: string;
-  description: string;
-  date: string;
-  hours: string;
-  price: string;
-  url: string;
-  img: string;
-}
+import { Icard } from "../types/types";
 
 const CourseCard: React.FC<Icard> = (card) => {
   return (

@@ -1,20 +1,21 @@
 import React, { useContext, useMemo, useState } from "react";
+import { Client } from "@notionhq/client";
 import Card from "../../assets/imgs/card.png";
+import { Icard } from "../../components/types/types";
 
 interface Props {
   children: JSX.Element;
 }
 
+const notionDatabaseId = "";
+const notionSecret = "";
+const notion = new Client({
+  auth: `${notionSecret}`,
+});
+
 export type ContextValue = {
- cards: {
-  title: string;
-  description: string;
-  date: string;
-  hours: string;
-  price: string;
-  url: string;
-  img: any;
-}[]
+  courses: Icard[];
+  loading: boolean;
 };
 
 export const DataContext = React.createContext<ContextValue | undefined>(
@@ -22,7 +23,8 @@ export const DataContext = React.createContext<ContextValue | undefined>(
 );
 
 export const DataProvider: React.FC<Props> = ({ children, ...rest }) => {
-  const [cards] = useState([
+  const [loading, setLoading] = useState(false);
+  const [courses, setCourses] = useState<Icard[]>([
     {
       title: "Academia",
       description: "Treino de Bíceps e Tríceps",
@@ -61,11 +63,32 @@ export const DataProvider: React.FC<Props> = ({ children, ...rest }) => {
     },
   ]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const getCourses = async () => {
+    try {
+      setLoading(true);
+      const res = await notion.databases.query({
+        database_id: `${notionDatabaseId}`,
+      });
+
+      setCourses(res.results as any);
+    } catch {
+      console.log("Something went wrong, please try again later!");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // useEffect(() => {
+  //   getCourses();
+  // }, []);
+
   const value = useMemo(
     () => ({
-     cards,
+      courses,
+      loading,
     }),
-    [cards]
+    [courses, loading]
   );
 
   return (
