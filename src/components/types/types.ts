@@ -6,4 +6,5 @@ export interface Icard {
   price: string;
   url: string;
   img: string;
+  color: string;
 }

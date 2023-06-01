@@ -1,16 +1,17 @@
 import React, { useContext, useMemo, useState } from "react";
 import { Client } from "@notionhq/client";
 import Card from "../../assets/imgs/card.png";
+import Card1 from "../../assets/imgs/card1.png";
+import Card2 from "../../assets/imgs/card2.png";
+import Card3 from "../../assets/imgs/card3.png";
 import { Icard } from "../../components/types/types";
 
 interface Props {
   children: JSX.Element;
 }
 
-const notionDatabaseId = "";
-const notionSecret = "";
 const notion = new Client({
-  auth: `${notionSecret}`,
+  auth: `${process.env.NOTION_SECRET}`,
 });
 
 export type ContextValue = {
@@ -33,33 +34,37 @@ export const DataProvider: React.FC<Props> = ({ children, ...rest }) => {
       price: "15",
       url: "",
       img: Card,
+      color: "#FFCE59",
     },
     {
-      title: "Academia",
-      description: "Treino de Bíceps e Tríceps",
+      title: "Workshop",
+      description: "Curso JavaScript e TypeScript do básico ao avançado",
       date: "De 26 a 28 de Maio",
       hours: "08 Horas",
       price: "15",
       url: "",
-      img: Card,
+      img: Card1,
+      color: "#00B8FE",
     },
     {
       title: "Academia",
-      description: "Treino de Bíceps e Tríceps",
+      description: "Hábitos para melhorar seu dia-a-dia",
       date: "De 26 a 28 de Maio",
       hours: "08 Horas",
       price: "15",
       url: "",
-      img: Card,
+      img: Card2,
+      color: "#FFCE59",
     },
     {
-      title: "Academia",
-      description: "Treino de Bíceps e Tríceps",
+      title: "Marketing",
+      description: "Marketing de Rede Sociais",
       date: "De 26 a 28 de Maio",
       hours: "08 Horas",
       price: "15",
       url: "",
-      img: Card,
+      img: Card3,
+      color: "#FF5995",
     },
   ]);
 
@@ -68,7 +73,7 @@ export const DataProvider: React.FC<Props> = ({ children, ...rest }) => {
     try {
       setLoading(true);
       const res = await notion.databases.query({
-        database_id: `${notionDatabaseId}`,
+        database_id: `${process.env.NOTION_DATABASE_ID}`,
       });
 
       setCourses(res.results as any);

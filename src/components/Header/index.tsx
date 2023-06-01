@@ -20,19 +20,19 @@ const Header: React.FC = () => {
               />
             </a>
             <div className="flex items-center lg:order-2">
-            <div className="flex items-center lg:order-2">
-              <a
-                href="#www."
-                className="flex items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
-              >
-                <img
-                  src={IconArrowRight}
-                  className="mr-2"
-                  alt="icon-arrow-right"
-                />
-                Contactos
-              </a>
-            </div>
+              <div className="flex items-center lg:order-2">
+                <a
+                  href="#www."
+                  className="flex hidden lg:flex lg:w-auto lg:order-1 items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
+                >
+                  <img
+                    src={IconArrowRight}
+                    className="mr-2"
+                    alt="icon-arrow-right"
+                  />
+                  Contactos
+                </a>
+              </div>
               <button
                 data-collapse-toggle="mobile-menu-2"
                 type="button"

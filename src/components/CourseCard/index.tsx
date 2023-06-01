@@ -11,7 +11,9 @@ const CourseCard: React.FC<Icard> = (card) => {
     <div className="flex items-center justify-center mb-32">
       <img src={card.img} className="m-2" alt="card" />
 
-      <div className="bg-[#FFCE59] rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px]">
+      <div
+        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] bg-[${card.color}]`}
+      >
         <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
           {card?.title}
         </span>
