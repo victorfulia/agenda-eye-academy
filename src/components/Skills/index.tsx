@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
         <div className="w-full flex justify-end">
           <img
             src={WomanSkill}
-            className="w-[160px] md:w-[290px] h-auto"
+            className="w-[0px] md:w-[290px] h-auto"
             alt="woman-skill"
           />
         </div>

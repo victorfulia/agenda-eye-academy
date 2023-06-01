@@ -22,11 +22,11 @@ const Header: React.FC = () => {
             <div className="flex items-center lg:order-2">
               <a
                 href="#www."
-                className="flex items-center bg-[#FF7112] rounded-[2000px] px-4 py-1 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
+                className="flex items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
               >
                 <img
                   src={IconArrowRight}
-                  className="mr-2 h-2"
+                  className="mr-2"
                   alt="icon-arrow-right"
                 />
                 Contactos

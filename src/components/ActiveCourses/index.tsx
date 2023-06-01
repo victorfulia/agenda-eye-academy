@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Assets
 import IconCalendar from "../../assets/imgs/icon-calendar.png";
@@ -8,6 +8,34 @@ import IconClock from "../../assets/imgs/icon-clock.png";
 import Counter from "../Counter";
 
 const ActiveCourses: React.FC = () => {
+  const [counter, setCounter] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const getCounter = () => {
+    var countDownDate = new Date("Jun 2, 2025 23:59:59").getTime();
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var timeToDate = countDownDate - now;
+      var days = Math.floor(timeToDate / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (timeToDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((timeToDate % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeToDate % (1000 * 60)) / 1000);
+      setCounter({ days, hours, minutes, seconds });
+      if (timeToDate < 0) {
+        clearInterval(x);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    getCounter();
+  }, []);
+  
   return (
     <div className="bg-[url('/src/assets/imgs/banner.png')] md:w-full w-full h-[900px] md:h-[650px] mt-2">
       <div className="w-full pt-8 flex-col px-8 mx-auto max-w-screen-xl">
@@ -57,10 +85,10 @@ const ActiveCourses: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap">
-              <Counter title="Dias" value="0" />
-              <Counter title="Horas" value="0" />
-              <Counter title="Minutos" value="0" />
-              <Counter title="Segundos" value="0" />
+              <Counter title="Dias" value={counter.days.toString()} />
+              <Counter title="Horas" value={counter.hours.toString()} />
+              <Counter title="Minutos" value={counter.minutes.toString()} />
+              <Counter title="Segundos" value={counter.seconds.toString()} />
             </div>
           </div>
         </div>
