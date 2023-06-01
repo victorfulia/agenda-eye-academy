@@ -56,7 +56,7 @@ const CourseCard: React.FC = () => {
 
           <a
             href="www"
-            className="flex mr-2 rounded-[200px] p-2 items-center justify-center"
+            className="flex rounded-[200px] p-2 items-center justify-center"
           >
             <span className="not-italic font-bold text-sm leading-4 text-black opacity-30">
               Saiba mais

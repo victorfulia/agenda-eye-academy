@@ -5,9 +5,9 @@ import WomanSkill from "../../assets/imgs/woman-skill.png";
 
 const Skills: React.FC = () => {
   return (
-    <div className="bg-[url('/src/assets/imgs/bg-skills.png')] w-full ">
+    <div className="bg-[url('/src/assets/imgs/bg-skills.png')] w-full">
       <div className="flex w-full justify-between pt-8 px-8 mx-auto max-w-screen-xl items-center">
-        <div className="flex-col max-w-[589px]">
+        <div className="flex-col max-w-[589px] mb-12 md:mb-2">
           <div>
             <span className="not-italic font-medium text-5xl text-black leading-9">
               Adquire novas skills tecnológicas
@@ -31,7 +31,13 @@ const Skills: React.FC = () => {
             </a>
           </div>
         </div>
-        <img src={WomanSkill} className="w-[322px] h-auto" alt="woman-skill" />
+        <div className="w-full flex justify-end">
+          <img
+            src={WomanSkill}
+            className="w-[160px] md:w-[290px] h-auto"
+            alt="woman-skill"
+          />
+        </div>
       </div>
     </div>
   );

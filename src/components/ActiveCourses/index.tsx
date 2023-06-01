@@ -38,8 +38,8 @@ const ActiveCourses: React.FC = () => {
 
           <div className="my-4">
             <div className="flex ml-1">
-              <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 px-3">
-                <span className="flex p-3 not-italic font-normal text-sm leading-4 text-white">
+              <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2">
+                <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
                   <img
                     src={IconCalendar}
                     className="mr-2"
@@ -48,8 +48,8 @@ const ActiveCourses: React.FC = () => {
                   De 26 a 28 de Maio
                 </span>
               </div>
-              <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] px-3">
-                <span className="flex p-3 not-italic font-normal text-sm leading-4 text-white">
+              <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px]">
+                <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
                   <img src={IconClock} className="mr-2" alt="icon-clock" />
                   08 Horas
                 </span>
