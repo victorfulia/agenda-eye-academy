@@ -2,6 +2,7 @@ import React from "react";
 import CourseCard from "../CourseCard";
 
 // Components
+import Card from "../../assets/imgs/card.png";
 
 const CoursesSchedule: React.FC = () => {
   return (
@@ -21,16 +22,52 @@ const CoursesSchedule: React.FC = () => {
 
       <div className="px-4 mt-12">
         <div className="flex flex-wrap justify-center">
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
-          <CourseCard />
+          {cards.map((item, index) => {
+            return <CourseCard {...item} key={index}/>;
+          })}
         </div>
       </div>
     </div>
   );
 };
+
+const cards = [
+  {
+    title: "Academia",
+    description: "Treino de Bíceps e Tríceps",
+    date: "De 26 a 28 de Maio",
+    hours: "08 Horas",
+    price: "15",
+    url: "",
+    img: Card,
+  },
+  {
+    title: "Academia",
+    description: "Treino de Bíceps e Tríceps",
+    date: "De 26 a 28 de Maio",
+    hours: "08 Horas",
+    price: "15",
+    url: "",
+    img: Card,
+  },
+  {
+    title: "Academia",
+    description: "Treino de Bíceps e Tríceps",
+    date: "De 26 a 28 de Maio",
+    hours: "08 Horas",
+    price: "15",
+    url: "",
+    img: Card,
+  },
+  {
+    title: "Academia",
+    description: "Treino de Bíceps e Tríceps",
+    date: "De 26 a 28 de Maio",
+    hours: "08 Horas",
+    price: "15",
+    url: "",
+    img: Card,
+  },
+];
 
 export default CoursesSchedule;

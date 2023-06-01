@@ -1,25 +1,34 @@
 import React from "react";
 
 // Assets
-import Card from "../../assets/imgs/card.png";
 import IconDarkCalendar from "../../assets/imgs/icon-dark-calendar.png";
 import IconDarkClock from "../../assets/imgs/icon-dark-clock.png";
 import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
 
-const CourseCard: React.FC = () => {
+interface Icard {
+  title: string;
+  description: string;
+  date: string;
+  hours: string;
+  price: string;
+  url: string;
+  img: string;
+}
+
+const CourseCard: React.FC<Icard> = (card) => {
   return (
     <div className="flex items-center justify-center mb-32">
-      <img src={Card} className="m-2" alt="card" />
+      <img src={card.img} className="m-2" alt="card" />
 
       <div className="bg-[#FFCE59] rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px]">
         <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
-          Academia
+          {card?.title}
         </span>
       </div>
       <div className="w-[285px] h-48 flex-col bg-white rounded-[20px] shadow-xl p-4 absolute mt-[400px]">
         <div className="flex items-center">
           <span className="not-italic font-semibold text-base leading-5 text-black">
-            Treino de Bíceps e Tríceps
+            {card.description}
           </span>
         </div>
 
@@ -30,14 +39,14 @@ const CourseCard: React.FC = () => {
               className="mr-2"
               alt="icon-dark-calendar"
             />
-            De 26 a 28 de Maio
+            {card.date}
           </span>
         </div>
 
         <div>
           <span className="flex not-italic font-normal text-sm leading-4 text-black">
             <img src={IconDarkClock} className="mr-2" alt="icon-dark-clock" />
-            08 Horas
+            {card.hours}
           </span>
         </div>
 
@@ -50,12 +59,12 @@ const CourseCard: React.FC = () => {
               Comprar
             </span>
             <span className="not-italic font-bold text-sm leading-4 text-white">
-              15€
+              {card.price}€
             </span>
           </a>
 
           <a
-            href="www"
+            href={card.url}
             className="flex rounded-[200px] p-2 items-center justify-center"
           >
             <span className="not-italic font-bold text-sm leading-4 text-black opacity-30">
