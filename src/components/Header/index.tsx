@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   return (
     <div>
       <header>
-        <nav className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 px-4 lg:px-6 py-8">
+        <nav className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 -mb-[6%] px-4 lg:px-6 py-8">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="https://" className="flex items-center">
               <img
@@ -115,8 +115,8 @@ const Header: React.FC = () => {
             <img src={BarraAgenda} alt="barra-agenda" />
           </div>
         </nav>
+        <img src={FooterHeader} className="w-full -mb-4" alt="footer-header" />
       </header>
-      <img src={FooterHeader} className="w-full" alt="footer-header" />
     </div>
   );
 };

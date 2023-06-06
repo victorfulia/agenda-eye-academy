@@ -12,7 +12,7 @@ const CourseCard: React.FC<Icard> = (card) => {
       <img src={card.img} className="m-2" alt="card" />
 
       <div
-        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] bg-[${card.color}]`}
+        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] ${card.color}`}
       >
         <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
           {card?.title}
