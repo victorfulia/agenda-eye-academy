@@ -5,18 +5,17 @@ import React, {
   useMemo,
   useState,
 } from "react";
+import axios from "axios";
 
 // Types
 import { Icard } from "../../components/types/types";
-import axios from "axios";
-// import axios from "axios";
 
 interface Props {
   children: JSX.Element;
 }
 
 export type ContextValue = {
-  courses: Icard[];
+  courses: any[];
   loading: boolean;
 };
 

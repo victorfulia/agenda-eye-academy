@@ -1,7 +1,8 @@
 export interface Icard {
   title: string;
   description: string;
-  date: string;
+  start: string;
+  and: string;
   hours: string;
   price: string;
   url: string;

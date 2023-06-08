@@ -4,9 +4,10 @@ import React from "react";
 import IconDarkCalendar from "../../assets/imgs/icon-dark-calendar.png";
 import IconDarkClock from "../../assets/imgs/icon-dark-clock.png";
 import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
+import moment from "moment";
 
 const CourseCard: React.FC<any> = (card) => {
-  const { hours, img, description, Date, price, color, title, URL } =
+  const { hours, img, description, start, and, price, color, title, URL } =
     card.properties;
 
   return (
@@ -40,7 +41,8 @@ const CourseCard: React.FC<any> = (card) => {
               className="mr-2"
               alt="icon-dark-calendar"
             />
-            {Date?.date.start}
+            {moment(start?.date.start).format("ll")} a{" "}
+            {moment(and?.date.start).format("ll")}
           </span>
         </div>
 
@@ -67,7 +69,8 @@ const CourseCard: React.FC<any> = (card) => {
           <a
             href={URL?.url}
             target="_blank"
-            className="flex rounded-[200px] p-2 items-center justify-center" rel="noreferrer"
+            className="flex rounded-[200px] p-2 items-center justify-center"
+            rel="noreferrer"
           >
             <span className="not-italic font-bold text-sm leading-4 text-black opacity-30">
               Saiba mais
