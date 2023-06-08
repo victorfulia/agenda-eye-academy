@@ -4,24 +4,32 @@ import React from "react";
 import IconDarkCalendar from "../../assets/imgs/icon-dark-calendar.png";
 import IconDarkClock from "../../assets/imgs/icon-dark-clock.png";
 import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
-import { Icard } from "../types/types";
 
-const CourseCard: React.FC<Icard> = (card) => {
+const CourseCard: React.FC<any> = (card) => {
+  const { hours, img, description, Date, price, color, title, URL } =
+    card.properties;
+
   return (
     <div className="flex items-center justify-center mb-32">
-      <img src={card.img} className="m-2" alt="card" />
+      <img
+        src={img?.files[0].file.url}
+        className="m-2"
+        alt="card"
+        height={395}
+        width={309}
+      />
 
       <div
-        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] ${card.color}`}
+        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] ${color?.rich_text[0].text.content}`}
       >
         <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
-          {card?.title}
+          {title?.multi_select[0].name}
         </span>
       </div>
       <div className="w-[285px] h-48 flex-col bg-white rounded-[20px] shadow-xl p-4 absolute mt-[400px]">
         <div className="flex items-center">
           <span className="not-italic font-semibold text-base leading-5 text-black">
-            {card.description}
+            {description?.rich_text[0].text.content}
           </span>
         </div>
 
@@ -32,14 +40,14 @@ const CourseCard: React.FC<Icard> = (card) => {
               className="mr-2"
               alt="icon-dark-calendar"
             />
-            {card.date}
+            {Date?.date.start}
           </span>
         </div>
 
         <div>
           <span className="flex not-italic font-normal text-sm leading-4 text-black">
             <img src={IconDarkClock} className="mr-2" alt="icon-dark-clock" />
-            {card.hours}
+            {hours?.rich_text[0].text.content} Horas
           </span>
         </div>
 
@@ -52,13 +60,14 @@ const CourseCard: React.FC<Icard> = (card) => {
               Comprar
             </span>
             <span className="not-italic font-bold text-sm leading-4 text-white">
-              {card.price}€
+              {price?.rich_text[0].text.content}€
             </span>
           </a>
 
           <a
-            href={card.url}
-            className="flex rounded-[200px] p-2 items-center justify-center"
+            href={URL?.url}
+            target="_blank"
+            className="flex rounded-[200px] p-2 items-center justify-center" rel="noreferrer"
           >
             <span className="not-italic font-bold text-sm leading-4 text-black opacity-30">
               Saiba mais
