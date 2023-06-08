@@ -12,7 +12,7 @@ import { useData } from "../../context/data";
 import moment from "moment";
 
 const ActiveCourses: React.FC = () => {
-  const { courses, loading } = useData();
+  const { courses } = useData();
   const [counter, setCounter] = useState({
     days: 0,
     hours: 0,
@@ -23,12 +23,13 @@ const ActiveCourses: React.FC = () => {
   const activeCourse = useMemo(() => {
     return {
       title: courses[0]?.properties.title.multi_select[0].name,
-      description:
-        courses[0]?.properties.description?.rich_text[0].text.content,
+      description: courses[0]?.properties.description.rich_text[0].text.content,
+      details: courses[0]?.properties.details.rich_text[0].text.content,
+      learning: courses[0]?.properties.learning.multi_select,
       start: moment(courses[0]?.properties.start.date.start).format("ll"),
-      end: moment(courses[0]?.properties.end?.date.start).format("ll"),
-      time: `${courses[0]?.properties.hours?.rich_text[0].text.content} ${
-        courses[0]?.properties.hours?.rich_text[0].text.content > 1
+      end: moment(courses[0]?.properties.end.date.start).format("ll"),
+      time: `${courses[0]?.properties.hours.rich_text[0].text.content} ${
+        courses[0]?.properties.hours.rich_text[0].text.content > 1
           ? "Horas"
           : "Hora"
       }`,
@@ -74,14 +75,14 @@ const ActiveCourses: React.FC = () => {
       <div className="w-full pt-8 flex-col px-8 mx-auto max-w-screen-xl">
         <div className="mt-20 max-w-[630px]">
           <span className="not-italic font-bold text-5xl text-white leading-9">
-            {activeCourse.title || "Barman: Como preparar e criar bebidas"}
+            {activeCourse.description ||
+              "Barman: Como preparar e criar bebidas"}
           </span>
         </div>
 
         <div className="mt-6 max-w-[630px]">
           <span className="not-italic font-medium text-base leading-6 text-white text-opacity-80">
-            {activeCourse.description ||
-              "O bartender, além de ser responsável pelo bar, precisa ter conhecimento de bebidas, produtos, equipamentos e utensílios necessários para o seu trabalho."}
+            {activeCourse.details || ""}
           </span>
         </div>
         <div className="justify-between sm:flex">
@@ -90,9 +91,13 @@ const ActiveCourses: React.FC = () => {
               Com este curso grátis de Bartender, o aluno aprenderá:
             </span>
             <ul className="list-disc not-italic font-medium text-base leading-6 text-white text-opacity-80 pl-4">
-              <li>Como cuidar e organizar um bar;</li>
-              <li>Como preparar e criar bebidas;</li>
-              <li>As técnicas de servir profissionalmente,</li>
+              {activeCourse?.learning
+                ? activeCourse?.learning.map(
+                    ({ id, name }: { id: string; name: string }) => (
+                      <li key={id}>{name}</li>
+                    )
+                  )
+                : null}
             </ul>
           </div>
 

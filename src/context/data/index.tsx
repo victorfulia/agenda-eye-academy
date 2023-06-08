@@ -7,9 +7,6 @@ import React, {
 } from "react";
 import axios from "axios";
 
-// Types
-import { Icard } from "../../components/types/types";
-
 interface Props {
   children: JSX.Element;
 }
@@ -32,7 +29,7 @@ export const DataProvider: React.FC<Props> = ({ children, ...rest }) => {
     try {
       setLoading(true);
       const res = await axios.get("http://localhost:3009/query-database");
-      setCourses(res.data.results);
+      setCourses(res?.data.results);
     } catch {
     } finally {
       setLoading(false);
