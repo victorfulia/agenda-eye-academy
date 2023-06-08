@@ -12,7 +12,7 @@ import { useData } from "../../context/data";
 import moment from "moment";
 
 const ActiveCourses: React.FC = () => {
-  const { courses } = useData();
+  const { courses, loading } = useData();
   const [counter, setCounter] = useState({
     days: 0,
     hours: 0,
@@ -33,7 +33,9 @@ const ActiveCourses: React.FC = () => {
           : "Hora"
       }`,
       url: courses[0]?.properties.URL.url,
-      price: `${courses[0]?.properties.price?.rich_text[0].text.content} €`,
+      price: `${
+        courses[0]?.properties.price?.rich_text[0].text.content || "--"
+      } €`,
       days: counter.days || 0,
       hours: counter.hours || 0,
       minutes: counter.minutes || 0,
@@ -54,7 +56,9 @@ const ActiveCourses: React.FC = () => {
       );
       var minutes = Math.floor((timeToDate % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timeToDate % (1000 * 60)) / 1000);
-      setCounter({ days, hours, minutes, seconds });
+      if (days && hours && minutes && seconds > 0) {
+        setCounter({ days, hours, minutes, seconds });
+      }
       if (timeToDate < 0) {
         clearInterval(x);
       }
