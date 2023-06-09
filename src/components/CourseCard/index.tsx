@@ -49,7 +49,8 @@ const CourseCard: React.FC<any> = (card) => {
         <div>
           <span className="flex not-italic font-normal text-sm leading-4 text-black">
             <img src={IconDarkClock} className="mr-2" alt="icon-dark-clock" />
-            {hours?.rich_text[0].text.content} Horas
+            {hours?.rich_text[0].text.content || "--"}{" "}
+            {hours?.rich_text[0].text.content > 1 ? "Horas" : "Hora"}
           </span>
         </div>
 
