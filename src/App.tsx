@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./screens/Home";
 import AppProvider from "./context";
+import "utils/firebase";
 
 const App: React.FC = () => {
   return (
