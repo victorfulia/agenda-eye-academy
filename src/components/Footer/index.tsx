@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // Assets
 import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.png";
@@ -12,7 +13,7 @@ const Footer: React.FC = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6">
             <a href="https" className="flex items-center">
-              <img
+              <Image
                 src={LogoEyeAcademy}
                 className="ml-3"
                 alt="logo-eye-academy"
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
             </a>
             <div className="p-4 flex mt-8">
               <a href="https">
-                <img
+                <Image
                   src={StartUpTechVisa}
                   className="ml-3"
                   alt="start-up-tech-visa"
@@ -51,7 +52,7 @@ const Footer: React.FC = () => {
                     href="https:"
                     className="flex hover:underline bg-[#FF7112] rounded-[200px] p-3 px-5 not-italic font-bold text-base leading-5 text-white"
                   >
-                    <img
+                    <Image
                       src={IconWhatsapp}
                       className="mr-2"
                       alt="icon-whatsapp"

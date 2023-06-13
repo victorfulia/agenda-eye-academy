@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import CourseCard from "../CourseCard";
-import { useData } from "../../context/data";
+import { useCourse } from "../../context/courses";
 
 const CoursesSchedule: React.FC = () => {
-  const { cards } = useData();
+  const { courses } = useCourse();
+
   return (
     <div className="w-full pt-8 flex-col px-8">
       <div className="mt-20 flex justify-center items-center">
@@ -21,8 +23,8 @@ const CoursesSchedule: React.FC = () => {
 
       <div className="px-4 mt-12">
         <div className="flex flex-wrap justify-center">
-          {cards?.map((item, index) => {
-            return <CourseCard {...item} key={index} />;
+          {courses?.map((item, index) => {
+            return <CourseCard item={item} key={index} />;
           })}
         </div>
       </div>
