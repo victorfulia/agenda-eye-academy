@@ -71,20 +71,20 @@ const ActiveCourses: React.FC = () => {
   }, [getCounter]);
 
   return (
-    <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[970px] md:h-[650px]">
-      <div className="w-full pt-8 flex-col px-8 mx-auto max-w-screen-xl">
-        <div className="mt-20 max-w-[630px]">
-          <span className="not-italic font-bold text-5xl text-white leading-9">
-            {activeCourse.description ||
-              "Barman: Como preparar e criar bebidas"}
+    <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[969px] md:h-[650px]">
+      <div className="w-full pt-4 flex-col px-8 mx-auto max-w-screen-xl">
+        <div className="mt-10 max-w-[630px]">
+          <span className="not-italic font-bold text-5xl text-white leading-9 line-clamp-2">
+            {activeCourse.description || ""}
           </span>
         </div>
 
         <div className="mt-6 max-w-[630px]">
-          <span className="not-italic font-medium text-base leading-6 text-white text-opacity-80">
+          <span className="not-italic font-medium text-base leading-6 text-white text-opacity-80 line-clamp-3">
             {activeCourse.details || ""}
           </span>
         </div>
+
         <div className="justify-between sm:flex">
           <div className="mt-6 max-w-[630px]">
             <span className="not-italic font-medium text-base leading-6 text-white text-opacity-80">
@@ -93,26 +93,47 @@ const ActiveCourses: React.FC = () => {
             <ul className="list-disc not-italic font-medium text-base leading-6 text-white text-opacity-80 pl-4">
               {activeCourse?.learning
                 ? activeCourse?.learning.map(
-                    ({ id, name }: { id: string; name: string }) => (
-                      <li key={id}>{name}</li>
-                    )
+                    ({ id, name }: { id: string; name: string }) => {
+                      return (
+                        <li key={id}>
+                          <span className="line-clamp-1">{name}</span>
+                        </li>
+                      );
+                    }
                   )
                 : null}
             </ul>
+
+            <div className="flex items-center max-w-[630px] h-20">
+              <a
+                href="/page"
+                target="_blank"
+                className="bg-[#FF7112] rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white mr-3 font-sans"
+              >
+                Comprar {activeCourse.price}
+              </a>
+              <a
+                href={activeCourse.url}
+                target="_blank"
+                className="border-orange-600 border rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white font-sans"
+                rel="noreferrer"
+              >
+                Saber mais
+              </a>
+            </div>
           </div>
 
           <div className="my-4">
             <div className="flex flex-wrap-reverse ml-1">
               <div className="px-4 flex items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 my-1 h-[35px]">
-              <Image
-                    src="/imgs/icon-calendar.png"
-                    className="mr-2"
-                    width={13.46}
-                    height={14.44}
-                    alt="icon-calendar"
-                  />
+                <Image
+                  src="/imgs/icon-calendar.png"
+                  className="mr-2"
+                  width={13.46}
+                  height={14.44}
+                  alt="icon-calendar"
+                />
                 <span className="not-italic font-normal text-sm text-white ">
-                  
                   {activeCourse.start
                     ? `${activeCourse.start} a ${activeCourse.end}`
                     : "De 26 a 28 de Maio"}
@@ -145,23 +166,6 @@ const ActiveCourses: React.FC = () => {
               />
             </div>
           </div>
-        </div>
-
-        <div className="max-w-[630px]">
-          <a
-            href="/page"
-            className="bg-[#FF7112] rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white mr-3 font-sans"
-          >
-            Comprar {activeCourse.price}
-          </a>
-          <a
-            href={activeCourse.url}
-            target="_blank"
-            className="border-orange-600 border rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white font-sans"
-            rel="noreferrer"
-          >
-            Saber mais
-          </a>
         </div>
       </div>
     </div>

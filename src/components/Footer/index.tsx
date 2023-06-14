@@ -16,21 +16,21 @@ const Footer: React.FC = () => {
                 alt="logo-eye-academy"
               />
             </a>
-            <div className="p-4 flex mt-8">
+            <div className="p-4 mt-8 flex">
               <a
                 href="https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Empreendedorismo-Inovacao/Empreendedorismo-(1)/Tech-Visa.aspx"
                 target="blank"
               >
                 <Image
                   src="/imgs/start-up-tech-visa.png"
-                  className="ml-3"
+                  className="md:ml-3 md:mb-0 mb-4"
                   width={178}
                   height={62.27}
                   alt="start-up-tech-visa"
                 />
               </a>
 
-              <div className="max-w-[150px] ml-4">
+              <div className="md:max-w-[150px] md:ml-4">
                 <span className="not-italic font-semibold text-xs leading-4 text-white">
                   Eyecandy is part of the Tech Visa program, created to simplify
                   the granting of a work visa or residence permit for non-EU
@@ -40,12 +40,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-1 pr-8">
+          <div className="grid sm:grid-cols-1 pr-8 p-4">
             <div>
-              <h2 className="not-italic font-medium text-3xl leading-9 text-white">
+              <h2 className="not-italic font-medium leading-9 text-white md:text-3xl text-xl">
                 Ainda tens dúvidas?
               </h2>
-              <h2 className="not-italic font-medium text-3xl leading-9 text-white mt-4">
+              <h2 className="not-italic font-medium leading-9 text-white mt-4 md:text-3xl text-xl">
                 Basta entrar em contacto connosco!
               </h2>
               <ul className="text-gray-400 font-medium">
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
         </div>
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="not-italic font-semibold text-sm leading-4 text-white">
+          <span className="not-italic font-semibold md:text-sm text-xs leading-4 text-white">
             © 2023{" "}
             <a href="https" className="hover:underline">
               Eyecandy Academy
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                     <a
                       href={link}
                       target="blank"
-                      className="hover:underline not-italic font-semibold text-base leading-4 text-white"
+                      className="hover:underline not-italic font-semibold md:text-base text-xs leading-2 text-white"
                     >
                       {title}
                     </a>
