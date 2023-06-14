@@ -103,29 +103,30 @@ const ActiveCourses: React.FC = () => {
 
           <div className="my-4">
             <div className="flex flex-wrap-reverse ml-1">
-              <div className="items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 my-1 h-[35px]">
-                <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
-                  <Image
+              <div className="px-4 flex items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 my-1 h-[35px]">
+              <Image
                     src="/imgs/icon-calendar.png"
                     className="mr-2"
                     width={13.46}
                     height={14.44}
                     alt="icon-calendar"
                   />
+                <span className="not-italic font-normal text-sm text-white ">
+                  
                   {activeCourse.start
                     ? `${activeCourse.start} a ${activeCourse.end}`
                     : "De 26 a 28 de Maio"}
                 </span>
               </div>
-              <div className="items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] my-1 h-[35px]">
-                <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
-                  <Image
-                    src="/imgs/icon-clock.png"
-                    width={13.71}
-                    height={8.57}
-                    className="mr-2"
-                    alt="icon-clock"
-                  />
+              <div className="px-4 flex items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] my-1 h-[35px]">
+                <Image
+                  src="/imgs/icon-clock.png"
+                  width={13.71}
+                  height={8.57}
+                  className="mr-2"
+                  alt="icon-clock"
+                />
+                <span className=" not-italic font-normal text-sm text-white">
                   {activeCourse.time}
                 </span>
               </div>

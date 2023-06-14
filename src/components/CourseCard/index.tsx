@@ -32,29 +32,29 @@ const CourseCard: React.FC<any> = (card) => {
           </span>
         </div>
 
-        <div>
-          <span className="flex py-4 not-italic font-normal text-sm leading-4 text-black">
-            <Image
-              src="/imgs/icon-dark-calendar.png"
-              className="mr-2"
-              width={13.46}
-              height={14.44}
-              alt="icon-dark-calendar"
-            />
+        <div className="flex items-center py-4">
+          <Image
+            src="/imgs/icon-dark-calendar.png"
+            className="mr-2"
+            width={13.46}
+            height={14.44}
+            alt="icon-dark-calendar"
+          />
+          <span className="not-italic font-normal text-sm leading-4 text-black">
             {moment(start?.date.start).format("ll")} a{" "}
             {moment(and?.date.start).format("ll")}
           </span>
         </div>
 
-        <div>
-          <span className="flex not-italic font-normal text-sm leading-4 text-black">
-            <Image
-              src="/imgs/icon-dark-clock.png"
-              width={13.71}
-              height={14.86}
-              className="mr-2"
-              alt="icon-dark-clock"
-            />
+        <div className="flex items-center">
+          <Image
+            src="/imgs/icon-dark-clock.png"
+            width={13.71}
+            height={14.86}
+            className="mr-2"
+            alt="icon-dark-clock"
+          />
+          <span className="not-italic font-normal text-sm leading-4 text-black">
             {hours?.rich_text[0].text.content || "--"}{" "}
             {hours?.rich_text[0].text.content > 1 ? "Horas" : "Hora"}
           </span>
