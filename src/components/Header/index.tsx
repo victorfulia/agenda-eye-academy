@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Collapse, initTE } from "tw-elements";
 
 // Assets
 import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.png";
@@ -10,7 +9,7 @@ import IconArrowRight from "../../assets/imgs/icon-arrow-right.png";
 import FooterHeader from "../../assets/imgs/footer-header.png";
 
 const Header: React.FC = () => {
-  initTE({ Collapse });
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <header>
@@ -38,35 +37,28 @@ const Header: React.FC = () => {
                 </a>
               </div>
 
-              <div
-                className="!visible hidden flex-grow basis-[100%] items-center lg:mt-0  lg:basis-auto"
-                id="navbarSupportedContent3"
-                data-te-collapse-item
-              >
-                <ul
-                  className="list-style-none flex flex-col pl-0 lg:flex-row"
-                  data-te-navbar-nav-ref
-                >
-                  <li className=" lg:my-0 lg:pr-2" data-te-nav-item-ref>
-                    <a
-                      className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                      aria-current="page"
-                      href="https://api.whatsapp.com/send/?phone=351933181339&text&type=phone_number&app_absent=0"
-                      target="blank"
-                      data-te-nav-link-ref
-                    >
-                      Contato
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              {isOpen && (
+                <div className="flex-grow basis-[100%] items-center lg:mt-0  lg:basis-auto">
+                  <ul
+                    className="list-style-none flex flex-col pl-0 lg:flex-row"
+                    data-te-navbar-nav-ref
+                  >
+                    <li className=" lg:my-0 lg:pr-2" data-te-nav-item-ref>
+                      <a
+                        className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        aria-current="page"
+                        href="https://api.whatsapp.com/send/?phone=351933181339&text&type=phone_number&app_absent=0"
+                        target="blank"
+                        data-te-nav-link-ref
+                      >
+                        Contato
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
               <button
-                type="button"
-                data-te-collapse-init
-                data-te-target="#navbarSupportedContent3"
-                aria-controls="navbarSupportedContent3"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+                onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Open main menu</span>
