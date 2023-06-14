@@ -6,17 +6,19 @@ const Footer: React.FC = () => {
     <footer className="bg-[#0D418C]">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="mb-6">
-            <a href="https" className="flex items-center">
-              <Image
-                src="/imgs/logo-ec-academy.png"
-                className="ml-3"
-                width={258}
-                height={51}
-                alt="logo-eye-academy"
-              />
-            </a>
-            <div className="p-4 mt-8 flex">
+          <div className="mb-6 px-4">
+            <div>
+              <a href="https" className="flex items-center">
+                <Image
+                  src="/imgs/logo-ec-academy.png"
+                  
+                  width={258}
+                  height={51}
+                  alt="logo-eye-academy"
+                />
+              </a>
+            </div>
+            <div className="mt-8 lg:flex">
               <a
                 href="https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Empreendedorismo-Inovacao/Empreendedorismo-(1)/Tech-Visa.aspx"
                 target="blank"
@@ -40,12 +42,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-1 pr-8 p-4">
+          <div className="grid sm:grid-cols-1 pr-8 px-4">
             <div>
               <h2 className="not-italic font-medium leading-9 text-white md:text-3xl text-xl">
                 Ainda tens dúvidas?
               </h2>
-              <h2 className="not-italic font-medium leading-9 text-white mt-4 md:text-3xl text-xl">
+              <h2 className="not-italic font-medium leading-9 text-white mt-2 md:mt-4 md:text-3xl text-xl">
                 Basta entrar em contacto connosco!
               </h2>
               <ul className="text-gray-400 font-medium">
@@ -69,8 +71,10 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+
+        <div className="sm:flex sm:items-center sm:justify-between px-4">
           <span className="not-italic font-semibold md:text-sm text-xs leading-4 text-white">
             © 2023{" "}
             <a href="https" className="hover:underline">
@@ -82,7 +86,7 @@ const Footer: React.FC = () => {
             <ul className="flex text-gray-400 font-medium">
               {footerLinks?.map(({ title, link }, index) => {
                 return (
-                  <li className="ml-4" key={index}>
+                  <li className="mr-4" key={index}>
                     <a
                       href={link}
                       target="blank"

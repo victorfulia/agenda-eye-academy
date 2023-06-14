@@ -10,7 +10,7 @@ import Counter from "../Counter";
 import { useCourse } from "../../context/courses";
 
 const ActiveCourses: React.FC = () => {
-  const { courses } = useCourse();
+  const { courses, loading } = useCourse();
   const [counter, setCounter] = useState({
     days: 0,
     hours: 0,
@@ -69,6 +69,8 @@ const ActiveCourses: React.FC = () => {
       getCounter();
     }
   }, [getCounter]);
+
+  if(loading) return 
 
   return (
     <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[969px] md:h-[650px]">
