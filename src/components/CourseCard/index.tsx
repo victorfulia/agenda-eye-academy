@@ -8,20 +8,22 @@ const CourseCard: React.FC<any> = (card) => {
 
   if (!card) return;
 
+  const bgColor = `bg-[${color?.rich_text[0].text.content}]`;
+
   return (
     <div className="flex items-center justify-center mb-32">
       <Image
         src={img?.files[0].file.url}
-        className="m-2"
+        className="m-2 rounded-[20px]"
         alt="card"
         height={395}
         width={309}
       />
 
       <div
-        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] ${color?.rich_text[0].text.content}`}
+        className={`rounded-t-[20px] p-4 py-6 max-w-[138px] absolute mt-[195px] mr-[177px] ${bgColor}`}
       >
-        <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
+        <span className="flex not-italic font-normal text-sm text-black -mt-4">
           {title?.multi_select[0].name}
         </span>
       </div>

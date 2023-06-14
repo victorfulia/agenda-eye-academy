@@ -17,7 +17,10 @@ const Footer: React.FC = () => {
               />
             </a>
             <div className="p-4 flex mt-8">
-              <a href="https">
+              <a
+                href="https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Empreendedorismo-Inovacao/Empreendedorismo-(1)/Tech-Visa.aspx"
+                target="blank"
+              >
                 <Image
                   src="/imgs/start-up-tech-visa.png"
                   className="ml-3"
@@ -77,38 +80,19 @@ const Footer: React.FC = () => {
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <ul className="flex text-gray-400 font-medium">
-              <li className="ml-4">
-                <a
-                  href="#www"
-                  className="hover:underline not-italic font-semibold text-base leading-4 text-white"
-                >
-                  SAP Academy
-                </a>
-              </li>
-              <li className="ml-4">
-                <a
-                  href="#www"
-                  className="hover:underline not-italic font-semibold text-base leading-4 text-white"
-                >
-                  CursosSAP
-                </a>
-              </li>
-              <li className="ml-4">
-                <a
-                  href="#www"
-                  className="hover:underline not-italic font-semibold text-base leading-4 text-white"
-                >
-                  Quem Somos
-                </a>
-              </li>
-              <li className="ml-4">
-                <a
-                  href="#www"
-                  className="hover:underline not-italic font-semibold text-base leading-4 text-white"
-                >
-                  Política de privacidade
-                </a>
-              </li>
+              {footerLinks?.map(({ title, link }, index) => {
+                return (
+                  <li className="ml-4" key={index}>
+                    <a
+                      href={link}
+                      target="blank"
+                      className="hover:underline not-italic font-semibold text-base leading-4 text-white"
+                    >
+                      {title}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -118,3 +102,13 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+const footerLinks = [
+  { title: "SAP Academy", link: "https://eyecandy-academy.pt/sap-academy/" },
+  { title: "Cursos SAP", link: "https://eyecandy-academy.pt/#" },
+  { title: "Quem Somos", link: "https://eyecandy-academy.pt/quem-somos/" },
+  {
+    title: "Política de privacidade",
+    link: "https://eyecandy-academy.pt/politica-de-privacidade/",
+  },
+];

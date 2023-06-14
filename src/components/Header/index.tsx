@@ -19,12 +19,8 @@ const Header: React.FC = () => {
           className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 -mb-[6%] px-4 lg:px-6 py-8"
         >
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="https://" className="flex items-center">
-              <Image
-                src={LogoEyeAcademy}
-                // className="ml-3 h-6 sm:h-9"
-                alt="logo-eye-academy"
-              />
+            <a href="https://eyecandy-academy.pt/" className="items-center">
+              <Image src={LogoEyeAcademy} alt="logo-eye-academy" />
             </a>
             <div className="flex items-center lg:order-2">
               <div className="flex items-center lg:order-2">
