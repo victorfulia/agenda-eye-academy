@@ -1,11 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-// Assets
-import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.png";
-import IconWhatsapp from "../../assets/imgs/icon-whatsapp.png";
-import StartUpTechVisa from "../../assets/imgs/start-up-tech-visa.png";
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0D418C]">
@@ -14,16 +9,20 @@ const Footer: React.FC = () => {
           <div className="mb-6">
             <a href="https" className="flex items-center">
               <Image
-                src={LogoEyeAcademy}
+                src="/imgs/logo-ec-academy.png"
                 className="ml-3"
+                width={258}
+                height={51}
                 alt="logo-eye-academy"
               />
             </a>
             <div className="p-4 flex mt-8">
               <a href="https">
                 <Image
-                  src={StartUpTechVisa}
+                  src="/imgs/start-up-tech-visa.png"
                   className="ml-3"
+                  width={178}
+                  height={62.27}
                   alt="start-up-tech-visa"
                 />
               </a>
@@ -49,12 +48,15 @@ const Footer: React.FC = () => {
               <ul className="text-gray-400 font-medium">
                 <li className="mt-8 flex">
                   <a
-                    href="https:"
+                    href="https://api.whatsapp.com/send/?phone=351933181339&text&type=phone_number&app_absent=0"
+                    target="blank"
                     className="flex hover:underline bg-[#FF7112] rounded-[200px] p-3 px-5 not-italic font-bold text-base leading-5 text-white"
                   >
                     <Image
-                      src={IconWhatsapp}
+                      src="/imgs/icon-whatsapp.png"
                       className="mr-2"
+                      width={18.33}
+                      height={18.33}
                       alt="icon-whatsapp"
                     />
                     Fale connosco pelo Whatsapp

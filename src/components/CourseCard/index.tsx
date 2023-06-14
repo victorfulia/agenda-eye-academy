@@ -2,11 +2,6 @@ import React from "react";
 import Image from "next/image";
 import moment from "moment";
 
-// Assets
-import IconDarkCalendar from "../../assets/imgs/icon-dark-calendar.png";
-import IconDarkClock from "../../assets/imgs/icon-dark-clock.png";
-import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
-
 const CourseCard: React.FC<any> = (card) => {
   const { hours, img, description, start, and, price, color, title, URL } =
     card.item.properties;
@@ -40,8 +35,10 @@ const CourseCard: React.FC<any> = (card) => {
         <div>
           <span className="flex py-4 not-italic font-normal text-sm leading-4 text-black">
             <Image
-              src={IconDarkCalendar}
+              src="/imgs/icon-dark-calendar.png"
               className="mr-2"
+              width={13.46}
+              height={14.44}
               alt="icon-dark-calendar"
             />
             {moment(start?.date.start).format("ll")} a{" "}
@@ -51,7 +48,13 @@ const CourseCard: React.FC<any> = (card) => {
 
         <div>
           <span className="flex not-italic font-normal text-sm leading-4 text-black">
-            <Image src={IconDarkClock} className="mr-2" alt="icon-dark-clock" />
+            <Image
+              src="/imgs/icon-dark-clock.png"
+              width={13.71}
+              height={14.86}
+              className="mr-2"
+              alt="icon-dark-clock"
+            />
             {hours?.rich_text[0].text.content || "--"}{" "}
             {hours?.rich_text[0].text.content > 1 ? "Horas" : "Hora"}
           </span>
@@ -80,8 +83,10 @@ const CourseCard: React.FC<any> = (card) => {
               Saiba mais
             </span>
             <Image
-              src={IconArrowRight}
-              className="ml-2 h-2"
+              src="/imgs/icon-arrow-right-opacity.png"
+              className="ml-2"
+              width={10.5}
+              height={6}
               alt="icon-arrow-right"
             />
           </a>

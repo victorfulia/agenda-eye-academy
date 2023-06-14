@@ -3,10 +3,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import moment from "moment";
 
-// Assets
-import IconCalendar from "../../assets/imgs/icon-calendar.png";
-import IconClock from "../../assets/imgs/icon-clock.png";
-
 // Components
 import Counter from "../Counter";
 
@@ -110,8 +106,10 @@ const ActiveCourses: React.FC = () => {
               <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2">
                 <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
                   <Image
-                    src={IconCalendar}
+                    src="/imgs/icon-calendar.png"
                     className="mr-2"
+                    width={13.46}
+                    height={14.44}
                     alt="icon-calendar"
                   />
                   {activeCourse.start
@@ -121,7 +119,13 @@ const ActiveCourses: React.FC = () => {
               </div>
               <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px]">
                 <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
-                  <Image src={IconClock} className="mr-2" alt="icon-clock" />
+                  <Image
+                    src="/imgs/icon-clock.png"
+                    width={13.71}
+                    height={8.57}
+                    className="mr-2"
+                    alt="icon-clock"
+                  />
                   {activeCourse.time}
                 </span>
               </div>
