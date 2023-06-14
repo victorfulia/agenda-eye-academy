@@ -71,7 +71,7 @@ const ActiveCourses: React.FC = () => {
   }, [getCounter]);
 
   return (
-    <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[900px] md:h-[650px]">
+    <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[970px] md:h-[650px]">
       <div className="w-full pt-8 flex-col px-8 mx-auto max-w-screen-xl">
         <div className="mt-20 max-w-[630px]">
           <span className="not-italic font-bold text-5xl text-white leading-9">
@@ -102,8 +102,8 @@ const ActiveCourses: React.FC = () => {
           </div>
 
           <div className="my-4">
-            <div className="flex ml-1">
-              <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2">
+            <div className="flex flex-wrap-reverse ml-1">
+              <div className="items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] mr-2 my-1 h-[35px]">
                 <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
                   <Image
                     src="/imgs/icon-calendar.png"
@@ -117,7 +117,7 @@ const ActiveCourses: React.FC = () => {
                     : "De 26 a 28 de Maio"}
                 </span>
               </div>
-              <div className="backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px]">
+              <div className="items-center backdrop-blur-md bg-white/10 backdrop-opacity-6 rounded-[2000px] my-1 h-[35px]">
                 <span className="flex p-3 px-4 not-italic font-normal text-sm leading-4 text-white">
                   <Image
                     src="/imgs/icon-clock.png"

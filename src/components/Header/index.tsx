@@ -51,7 +51,7 @@ const Header: React.FC = () => {
                   className="list-style-none flex flex-col pl-0 lg:flex-row"
                   data-te-navbar-nav-ref
                 >
-                  <li className="my-4 lg:my-0 lg:pr-2" data-te-nav-item-ref>
+                  <li className=" lg:my-0 lg:pr-2" data-te-nav-item-ref>
                     <a
                       className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                       aria-current="page"
