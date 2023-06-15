@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // Assets
@@ -8,23 +9,24 @@ import IconArrowRight from "../../assets/imgs/icon-arrow-right.png";
 import FooterHeader from "../../assets/imgs/footer-header.png";
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <header>
-        <nav className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 -mb-[6%] px-4 lg:px-6 py-8">
+        <nav
+          data-te-navbar-ref
+          className="bg-gradient-to-r from-[#051630] to-[#0D418C] border-gray-200 -mb-[6%] px-4 lg:px-6 py-8"
+        >
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="https://" className="flex items-center">
-              <Image
-                src={LogoEyeAcademy}
-                // className="ml-3 h-6 sm:h-9"
-                alt="logo-eye-academy"
-              />
+            <a href="https://eyecandy-academy.pt/" className="items-center">
+              <Image src={LogoEyeAcademy} alt="logo-eye-academy" />
             </a>
             <div className="flex items-center lg:order-2">
               <div className="flex items-center lg:order-2">
                 <a
-                  href="#www."
+                  href="https://api.whatsapp.com/send/?phone=351933181339&text&type=phone_number&app_absent=0"
                   className="flex hidden lg:flex lg:w-auto lg:order-1 items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
+                  target="blank"
                 >
                   <Image
                     src={IconArrowRight}
@@ -34,90 +36,60 @@ const Header: React.FC = () => {
                   Contactos
                 </a>
               </div>
+
+              {isOpen && (
+                <div className="flex-grow basis-[100%] items-center lg:mt-0  lg:basis-auto">
+                  <ul
+                    className="list-style-none flex flex-col pl-0 lg:flex-row"
+                    data-te-navbar-nav-ref
+                  >
+                    <li className=" lg:my-0 lg:pr-2" data-te-nav-item-ref>
+                      <a
+                        className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        aria-current="page"
+                        href="https://api.whatsapp.com/send/?phone=351933181339&text&type=phone_number&app_absent=0"
+                        target="blank"
+                        data-te-nav-link-ref
+                      >
+                        Contato
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
               <button
-                data-collapse-toggle="mobile-menu-2"
-                type="button"
-                className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="mobile-menu-2"
-                aria-expanded="false"
+                onClick={() => setIsOpen(!isOpen)}
+                className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               >
                 <span className="sr-only">Open main menu</span>
                 <svg
                   className="w-6 h-6"
+                  aria-hidden="true"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fillRule="evenodd"
+                    fill-rule="evenodd"
                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                <svg
-                  className="hidden w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
+                    clip-rule="evenodd"
                   ></path>
                 </svg>
               </button>
-            </div>
-            <div
-              className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-              id="mobile-menu-2"
-            >
-              <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                {/* <li>
-                  <a
-                    href="#www"
-                    className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                    aria-current="page"
-                  >
-                    Academia SAP
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#www"
-                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    Cursos SAP
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#www"
-                    className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-                  >
-                    QuemSomos
-                  </a>
-                </li> */}
-                <li>
-                  <a
-                    href="#www"
-                    className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white"
-                    aria-current="page"
-                  >
-                    Agenda
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
           <div className="flex flex-wrap justify-center items-center mx-auto max-w-screen-xl mt-16 mb-12 flex-col">
             <span className="not-italic font-medium text-6xl text-white leading-[78px]">
               Agenda
             </span>
-            <Image src={BarraAgenda} alt="barra-agenda" />
+            <Image src={BarraAgenda} alt="barra-agenda" className="mb-12" />
           </div>
         </nav>
-        <Image src={FooterHeader} className="w-full -mb-4" alt="footer-header" />
+        <Image
+          src={FooterHeader}
+          className="w-full -mb-4"
+          alt="footer-header"
+        />
       </header>
     </div>
   );

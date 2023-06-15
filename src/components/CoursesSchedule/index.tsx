@@ -4,7 +4,9 @@ import CourseCard from "../CourseCard";
 import { useCourse } from "../../context/courses";
 
 const CoursesSchedule: React.FC = () => {
-  const { courses } = useCourse();
+  const { courses, loading } = useCourse();
+
+  if (loading) return;
 
   return (
     <div className="w-full pt-8 flex-col px-8">

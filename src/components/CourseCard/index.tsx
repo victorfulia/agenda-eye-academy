@@ -2,31 +2,28 @@ import React from "react";
 import Image from "next/image";
 import moment from "moment";
 
-// Assets
-import IconDarkCalendar from "../../assets/imgs/icon-dark-calendar.png";
-import IconDarkClock from "../../assets/imgs/icon-dark-clock.png";
-import IconArrowRight from "../../assets/imgs/icon-arrow-right-opacity.png";
-
 const CourseCard: React.FC<any> = (card) => {
   const { hours, img, description, start, and, price, color, title, URL } =
     card.item.properties;
 
   if (!card) return;
 
+  const bgColor = `bg-[${color?.rich_text[0].text.content}]`;
+
   return (
     <div className="flex items-center justify-center mb-32">
       <Image
         src={img?.files[0].file.url}
-        className="m-2"
+        className="m-2 rounded-[20px]"
         alt="card"
         height={395}
         width={309}
       />
 
       <div
-        className={`rounded-t-[20px] p-4 py-6 w-[108px] absolute mt-[195px] mr-[177px] ${color?.rich_text[0].text.content}`}
+        className={`rounded-t-[20px] p-4 py-6 max-w-[138px] absolute mt-[195px] mr-[177px] ${bgColor}`}
       >
-        <span className="flex not-italic font-normal text-sm leading-4 text-black -mt-4">
+        <span className="flex not-italic font-normal text-sm text-black -mt-4">
           {title?.multi_select[0].name}
         </span>
       </div>
@@ -37,21 +34,29 @@ const CourseCard: React.FC<any> = (card) => {
           </span>
         </div>
 
-        <div>
-          <span className="flex py-4 not-italic font-normal text-sm leading-4 text-black">
-            <Image
-              src={IconDarkCalendar}
-              className="mr-2"
-              alt="icon-dark-calendar"
-            />
+        <div className="flex items-center py-4">
+          <Image
+            src="/imgs/icon-dark-calendar.png"
+            className="mr-2"
+            width={13.46}
+            height={14.44}
+            alt="icon-dark-calendar"
+          />
+          <span className="not-italic font-normal text-sm leading-4 text-black">
             {moment(start?.date.start).format("ll")} a{" "}
             {moment(and?.date.start).format("ll")}
           </span>
         </div>
 
-        <div>
-          <span className="flex not-italic font-normal text-sm leading-4 text-black">
-            <Image src={IconDarkClock} className="mr-2" alt="icon-dark-clock" />
+        <div className="flex items-center">
+          <Image
+            src="/imgs/icon-dark-clock.png"
+            width={13.71}
+            height={14.86}
+            className="mr-2"
+            alt="icon-dark-clock"
+          />
+          <span className="not-italic font-normal text-sm leading-4 text-black">
             {hours?.rich_text[0].text.content || "--"}{" "}
             {hours?.rich_text[0].text.content > 1 ? "Horas" : "Hora"}
           </span>
@@ -80,8 +85,10 @@ const CourseCard: React.FC<any> = (card) => {
               Saiba mais
             </span>
             <Image
-              src={IconArrowRight}
-              className="ml-2 h-2"
+              src="/imgs/icon-arrow-right-opacity.png"
+              className="ml-2"
+              width={10.5}
+              height={6}
               alt="icon-arrow-right"
             />
           </a>
