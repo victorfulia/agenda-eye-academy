@@ -23,15 +23,14 @@ export const CoursesContext = React.createContext<ContextValue | undefined>(
 
 export const CoursesProvider: React.FC<Props> = ({ children, ...rest }) => {
   const [loading, setLoading] = useState(false);
-
   const [courses, setCourses] = useState<any[]>([]);
 
   const fetchData = useCallback(async () => {
     try {
       setLoading(true);
-      const res = await axios.get("/api/courses");
-      setCourses(res?.data.results);
-    } catch {
+
+      const response = await axios.get("/api/courses");
+      setCourses(response?.data.results);
     } finally {
       setLoading(false);
     }
@@ -39,8 +38,7 @@ export const CoursesProvider: React.FC<Props> = ({ children, ...rest }) => {
 
   useEffect(() => {
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fetchData]);
 
   const value = useMemo(
     () => ({
@@ -66,7 +64,3 @@ export const useCourse = (): ContextValue => {
 
   return context;
 };
-
-//
-// Utils
-//

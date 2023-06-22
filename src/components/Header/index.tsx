@@ -1,15 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-
-// Assets
-import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.png";
-import BarraAgenda from "../../assets/imgs/barra-agenda.png";
-import IconArrowRight from "../../assets/imgs/icon-arrow-right.png";
-import FooterHeader from "../../assets/imgs/footer-header.png";
+import LogoEyeAcademy from "../../assets/imgs/logo-ec-academy.svg";
+import BarraAgenda from "../../assets/imgs/barra-agenda.svg";
+import IconArrowRight from "../../assets/imgs/icon-arrow-right.svg";
+import FooterHeader from "../../assets/imgs/footer-header.svg";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <header>
@@ -21,11 +20,12 @@ const Header: React.FC = () => {
             <a href="https://eyecandy-academy.pt/" className="items-center">
               <Image src={LogoEyeAcademy} alt="logo-eye-academy" />
             </a>
+
             <div className="flex items-center lg:order-2">
               <div className="flex items-center lg:order-2">
                 <a
                   href="https://api.whatsapp.com/send/?phone=351933181339&text&type=phone_number&app_absent=0"
-                  className="flex hidden lg:flex lg:w-auto lg:order-1 items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
+                  className="hidden lg:flex lg:w-auto lg:order-1 items-center bg-[#FF7112] rounded-[2000px] px-4 py-2 mr-2 focus:outline-none not-italic font-bold sm:text-base text-sm leading-5 text-white"
                   target="blank"
                 >
                   <Image
