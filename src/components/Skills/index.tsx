@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 // Assets
-import WomanSkill from "../../assets/imgs/woman-skill.png";
+import WomanSkill from '../../assets/imgs/woman-skill.png'
 
 const Skills: React.FC = () => {
   return (
@@ -16,21 +16,16 @@ const Skills: React.FC = () => {
           </div>
           <div className="mt-12">
             <span className="not-italic font-normal text-base text-black leading-6 opacity-60">
-              Lorem ipsum dolor sit amet. Et galisum obcaecati est consectetur
-              accusamus est sint earum est nihil eligendi ut illum nisi aut
-              deserunt nihil! In voluptatibus obcaecati est voluptatem galisum
-              sed placeat omnis aut recusandae laboriosam ut atque consequatur
-              ab optio dolor.
+              Comece agora uma carreira nova e mude seu futuro para sempre.
+              Trabalhe com o sistema por onde passa 80% do PIB mundial, onde 99
+              das 100 maiores empresas do mundo tem, tais como: Google, Porche,
+              IBM, Coca-Cola, Roche, Dell, Nestlé, Siemens, Procter & Gamble,
+              Amazon etc. Até a Microsoft tem SAP para gerenciar processos
+              internos, incluindo finanças, recursos humanos e cadeia de
+              suprimentos.
             </span>
           </div>
-          <div className=" mt-12">
-            <a
-              href="#www"
-              className="w-56 h-12 rounded-[2000px] p-3 px-5 bg-gradient-to-r from-[#FF7112] to-[#FFA56A] not-italic font-bold text-base leading-5 text-white"
-            >
-              Ver mais Formações
-            </a>
-          </div>
+          
         </div>
         <div className="w-full flex justify-end">
           <Image
@@ -41,7 +36,7 @@ const Skills: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

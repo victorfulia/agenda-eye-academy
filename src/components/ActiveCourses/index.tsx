@@ -155,7 +155,7 @@ const ActiveCourses: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap">
+            <div className="flex ">
               <Counter title="Dias" value={activeCourse.days.toString()} />
               <Counter title="Horas" value={activeCourse.hours.toString()} />
               <Counter

@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
 const Footer: React.FC = () => {
   return (
@@ -8,10 +8,12 @@ const Footer: React.FC = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 px-4">
             <div>
-              <a href="https" className="flex items-center">
+              <a
+                href="https://eyecandy-academy.pt/"
+                className="flex items-center"
+              >
                 <Image
                   src="/imgs/logo-ec-academy.png"
-                  
                   width={258}
                   height={51}
                   alt="logo-eye-academy"
@@ -76,8 +78,8 @@ const Footer: React.FC = () => {
 
         <div className="sm:flex sm:items-center sm:justify-between px-4">
           <span className="not-italic font-semibold md:text-sm text-xs leading-4 text-white">
-            © 2023{" "}
-            <a href="https" className="hover:underline">
+            © 2023{' '}
+            <a href="https://eyecandy-academy.pt/" className="hover:underline">
               Eyecandy Academy
             </a>
             . Todos os direitos reservados.
@@ -95,24 +97,24 @@ const Footer: React.FC = () => {
                       {title}
                     </a>
                   </li>
-                );
+                )
               })}
             </ul>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 
 const footerLinks = [
-  { title: "SAP Academy", link: "https://eyecandy-academy.pt/sap-academy/" },
-  { title: "Cursos SAP", link: "https://eyecandy-academy.pt/#" },
-  { title: "Quem Somos", link: "https://eyecandy-academy.pt/quem-somos/" },
+  { title: 'SAP Academy', link: 'https://eyecandy-academy.pt/sap-academy/' },
+  { title: 'Cursos SAP', link: 'https://eyecandy-academy.pt/#' },
+  { title: 'Quem Somos', link: 'https://eyecandy-academy.pt/quem-somos/' },
   {
-    title: "Política de privacidade",
-    link: "https://eyecandy-academy.pt/politica-de-privacidade/",
+    title: 'Política de privacidade',
+    link: 'https://eyecandy-academy.pt/politica-de-privacidade/',
   },
-];
+]

@@ -1,14 +1,15 @@
-import React from "react";
-import Image from "next/image";
-import moment from "moment";
+import React from 'react'
+import Image from 'next/image'
+import moment from 'moment'
 
 const CourseCard: React.FC<any> = (card) => {
   const { hours, img, description, start, and, price, color, title, URL } =
-    card.item.properties;
+    card.item.properties
 
-  if (!card) return;
+  if (!card) return
 
-  const bgColor = `bg-[${color?.rich_text[0].text.content}]`;
+  const bgColor = `[${color?.rich_text[0]?.text?.content}]`
+ 
 
   return (
     <div className="flex items-center justify-center mb-32">
@@ -21,9 +22,9 @@ const CourseCard: React.FC<any> = (card) => {
       />
 
       <div
-        className={`rounded-t-[20px] p-4 py-6 max-w-[138px] absolute mt-[195px] mr-[177px] ${bgColor}`}
+        className={`rounded-t-[20px] p-4 py-6 max-w-[138px] absolute mt-[195px]  mr-[177px] bg-[#FFCE59]`}
       >
-        <span className="flex not-italic font-normal text-sm text-black -mt-4">
+        <span className="flex not-italic font-medium text-sm text-black -mt-4">
           {title?.multi_select[0].name}
         </span>
       </div>
@@ -43,8 +44,8 @@ const CourseCard: React.FC<any> = (card) => {
             alt="icon-dark-calendar"
           />
           <span className="not-italic font-normal text-sm leading-4 text-black">
-            {moment(start?.date.start).format("ll")} a{" "}
-            {moment(and?.date.start).format("ll")}
+            {moment(start?.date.start).format('ll')} a{' '}
+            {moment(and?.date.start).format('ll')}
           </span>
         </div>
 
@@ -57,8 +58,8 @@ const CourseCard: React.FC<any> = (card) => {
             alt="icon-dark-clock"
           />
           <span className="not-italic font-normal text-sm leading-4 text-black">
-            {hours?.rich_text[0].text.content || "--"}{" "}
-            {hours?.rich_text[0].text.content > 1 ? "Horas" : "Hora"}
+            {hours?.rich_text[0].text.content || '--'}{' '}
+            {hours?.rich_text[0].text.content > 1 ? 'Horas' : 'Hora'}
           </span>
         </div>
 
@@ -71,7 +72,7 @@ const CourseCard: React.FC<any> = (card) => {
               Comprar
             </span>
             <span className="not-italic font-bold text-sm leading-4 text-white">
-              {price?.rich_text[0].text.content}€
+              {price?.rich_text[0].text.content} €
             </span>
           </a>
 
@@ -95,7 +96,7 @@ const CourseCard: React.FC<any> = (card) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CourseCard;
+export default CourseCard
