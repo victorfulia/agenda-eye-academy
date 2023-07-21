@@ -23,8 +23,8 @@ const CoursesSchedule: React.FC = () => {
         </span>
       </div>
 
-      <div className="px-4 mt-12">
-        <div className="flex flex-wrap justify-center">
+      <div className="px-4 mt-10 mb-56">
+        <div className="flex flex-wrap justify-center max-md:space-y-20">
           {courses?.map((item, index) => {
             return <CourseCard item={item} key={index} />;
           })}

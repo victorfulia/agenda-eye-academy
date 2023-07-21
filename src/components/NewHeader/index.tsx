@@ -5,18 +5,15 @@ import LogoEyeAcademy from '../../assets/imgs/logo-ec-academy.svg'
 import BarraAgenda from '../../assets/imgs/barra-agenda.svg'
 import IconArrowRight from '../../assets/imgs/icon-arrow-right.svg'
 import FooterHeader from '../../assets/imgs/footer-header.svg'
-import List from '../../assets/imgs/list.svg'
 import NavBarDropdown from '../NavBarDropDown'
-import MenuHamburger from '../MenuHamburger'
 
-
-const Header: React.FC = () => {
+const NewHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div>
       <header>
-        <div className="fixed w-full z-50 top-0 left-0 flex justify-between items-center bg-gradient-to-r from-[#051630] to-[#0D418C] py-8 px-14 max-md:px-4 ">
+        <div className="fixed w-full z-50 top-0 left-0 flex justify-between items-center bg-gradient-to-r from-[#051630] to-[#0D418C] py-8 px-14 max-md:px-4">
           <a href="https://eyecandy-academy.pt/" className="items-center">
             <Image src={LogoEyeAcademy} alt="logo-eye-academy" />
           </a>
@@ -37,15 +34,6 @@ const Header: React.FC = () => {
               </a>
             </div>
 
-            
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden  w-full "
-            >
-              <span className="sr-only">Open main menu</span>
-              <Image src={List} className="w-7" alt="icon-list" />
-            </button>
-           
           </div>
         </div>
         <nav
@@ -65,27 +53,8 @@ const Header: React.FC = () => {
           alt="footer-header"
         />
       </header>
-      {isOpen && (
-              <div className="fixed  h-screen w-[75%] right-0 bottom-0 z-50 flex-grow basis-[100%] items-center lg:mt-0 bg-[#FF7112] lg:basis-auto px-5 py-5 ">
-                <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 absolute right-0 top-6"
-            >
-              <Image src={List} className="w-7" alt="icon-list" />
-            </button>
-                <ul
-                  className=" list-style-none flex flex-col pl-0 lg:flex-row pt-16"
-                  data-te-navbar-nav-ref
-                >
-                  <li className=" lg:my-0 lg:pr-2" data-te-nav-item-ref>
-                    <MenuHamburger/>
-                   
-                  </li>
-                </ul>
-              </div>
-            )}
     </div>
   )
 }
 
-export default Header
+export default NewHeader

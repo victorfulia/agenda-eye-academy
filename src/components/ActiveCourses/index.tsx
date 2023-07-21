@@ -34,7 +34,7 @@ const ActiveCourses: React.FC = () => {
       url: courses[0]?.properties.URL.url,
       price: `${
         courses[0]?.properties.price?.rich_text[0].text.content || "--"
-      } €`,
+      } `,
       days: counter.days || 0,
       hours: counter.hours || 0,
       minutes: counter.minutes || 0,
@@ -75,7 +75,7 @@ const ActiveCourses: React.FC = () => {
   return (
     <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[969px] md:h-[650px]">
       <div className="w-full pt-4 flex-col px-8 mx-auto max-w-screen-xl">
-        <div className="mt-10 max-w-[630px]">
+        <div className="mt-8 max-w-[630px]">
           <span className="not-italic font-bold text-5xl text-white leading-9 line-clamp-2">
             {activeCourse.description || ""}
           </span>
@@ -112,7 +112,7 @@ const ActiveCourses: React.FC = () => {
                 target="_blank"
                 className="bg-[#FF7112] rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white mr-3 font-sans"
               >
-                Comprar {activeCourse.price}
+                 {activeCourse.price}
               </a>
               <a
                 href={activeCourse.url}
@@ -155,7 +155,7 @@ const ActiveCourses: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex ">
+            <div className="flex">
               <Counter title="Dias" value={activeCourse.days.toString()} />
               <Counter title="Horas" value={activeCourse.hours.toString()} />
               <Counter

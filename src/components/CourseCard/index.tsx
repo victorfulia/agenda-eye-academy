@@ -68,11 +68,9 @@ const CourseCard: React.FC<any> = (card) => {
             href="www"
             className="mr-2 rounded-[200px] bg-orange-600 p-2 items-center px-3"
           >
-            <span className="not-italic font-bold text-sm leading-4 text-white mr-4">
-              Comprar
-            </span>
+          
             <span className="not-italic font-bold text-sm leading-4 text-white">
-              {price?.rich_text[0].text.content} €
+              {price?.rich_text[0].text.content}
             </span>
           </a>
 
