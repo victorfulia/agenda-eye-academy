@@ -37,29 +37,29 @@ const NavBarDropdown: React.FC = () => {
             </div>
           </div>
 
-          <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible rounded min-w-max">
+          <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-3 px-5 text-gray-800 shadow-xl group-hover:visible rounded min-w-max">
             <a
               href="https://eyecandy-academy.pt/sap-academy/sap-abap-academy-programacao/"
-              className="my-2 block border-b border-gray-100 pl-1 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 pl-1 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP ABAP Academy - Programação
             </a>
 
             <a
               href="https://eyecandy-academy.pt/sap-academy/sap-mm-academy-manutencao-de-materiais/"
-              className="my-2 block border-b border-gray-100  text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100  text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP MM Academy - Manutenção de Materiais
             </a>
             <a
               href="https://eyecandy-academy.pt/sap-academy/sap-sd-academy-vendas-e-distribuicao/"
-              className="my-2 block border-b border-gray-100  text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100  text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP SD Academy - Vendas e Distribuição
             </a>
             <a
               href="https://eyecandy-academy.pt/sap-academy/sap-fi-academy-financeiro/"
-              className="my-2 block border-b border-gray-100  text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100  text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP FI ACADEMY - Financeiro
             </a>
@@ -79,41 +79,41 @@ const NavBarDropdown: React.FC = () => {
             </div>
           </div>
 
-          <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible rounded min-w-max">
+          <div className="invisible absolute z-50 flex flex-col bg-gray-100 py-3 px-5 text-gray-800 shadow-xl group-hover:visible rounded min-w-max">
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-for-beginners/"
-              className="my-2 block border-b border-gray-100  pl-1 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100  pl-1 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP for Beginners
             </a>
 
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-activate/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP Activate
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/formacao-executiva-sap-s-4hana/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               Formação executiva SAP S/4HANA - Finance
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/formacao-executiva-sap-s-4hana-logistics/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               Formação executiva SAP S/4HANA - Logistics
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-extended-warehouse-management/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP Extended Warehouse Management
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/curso-sap-hcm-time-evaluation/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               Curso SAP HCM Time Evaluation
             </a>
@@ -121,7 +121,7 @@ const NavBarDropdown: React.FC = () => {
               <div className="relative">
                 <a
                   href="https://eyecandy-academy.pt/cursos-sap/sap-fiori/"
-                  className="group my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                  className="group block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -136,13 +136,13 @@ const NavBarDropdown: React.FC = () => {
                   >
                     <a
                       href="https://eyecandy-academy.pt/cursos-sap/sap-fiori/sap-pi/"
-                      className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                      className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                     >
                       SAP FIORI - Autorização no S/4HANA
                     </a>
                     <a
                       href="https://eyecandy-academy.pt/cursos-sap/sap-fiori/sap-fiori-e-sapui5/"
-                      className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                      className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                     >
                       SAP FIORI e SAPUI5
                     </a>
@@ -153,7 +153,7 @@ const NavBarDropdown: React.FC = () => {
             <div>
               <div className="relative">
                 <a
-                  className="group my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                  className="group block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                   onMouseEnter={handleMouseEnterTwo}
                   onMouseLeave={handleMouseLeaveTwo}
                 >
@@ -168,20 +168,20 @@ const NavBarDropdown: React.FC = () => {
                   >
                     <a
                       href="https://eyecandy-academy.pt/cursos-sap/sap-hana-2-0-instalacao/"
-                      className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                      className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                     >
                       SAP HANA 2.0 Instalação
                     </a>
                     <a
                       href="https://eyecandy-academy.pt/cursos-sap/sap-fiori/sap-hana-2-0-nuvem/"
-                      className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                      className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                     >
                       SAP HANA 2.0 Nuvem
                     </a>
 
                     <a
                       href="https://eyecandy-academy.pt/cursos-sap/sap-hana-2-0-monitoramento/"
-                      className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+                      className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
                     >
                       SAP HANA 2.0 Monitoramento
                     </a>
@@ -192,25 +192,25 @@ const NavBarDropdown: React.FC = () => {
 
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-solman/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP SOLMAN
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-grc-access-control/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP GRC - Access control
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-fi-aa/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP FI - AA
             </a>
             <a
               href="https://eyecandy-academy.pt/cursos-sap/sap-pi/"
-              className="my-2 block border-b border-gray-100 text-sm text-black hover:bg-[#FFF0EA]"
+              className="block border-b border-gray-100 text-sm text-black p-2 hover:bg-[#FFF0EA]"
             >
               SAP PI
             </a>

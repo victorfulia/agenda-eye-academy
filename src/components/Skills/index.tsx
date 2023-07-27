@@ -7,7 +7,7 @@ import WomanSkill from '../../assets/imgs/woman-skill.png'
 const Skills: React.FC = () => {
   return (
     <div className="bg-[url('/imgs/bg-skills.png')] w-full">
-      <div className="flex w-full justify-between pt-8 px-8 mx-auto max-w-screen-xl items-center">
+      <div className="flex w-full justify-between -mt-10 px-8 mx-auto max-w-screen-xl items-center">
         <div className="flex-col max-w-[589px] mb-12 md:mb-2">
           <div>
             <span className="not-italic font-medium text-5xl text-black leading-9">

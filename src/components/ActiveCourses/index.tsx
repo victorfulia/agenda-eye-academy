@@ -42,6 +42,7 @@ const ActiveCourses: React.FC = () => {
     };
   }, [counter.days, counter.hours, counter.minutes, counter.seconds, courses]);
 
+
   const getCounter = useCallback(() => {
     var countDownDate = new Date(
       moment(courses[0]?.properties.start?.date.start).format("LLL")
@@ -72,11 +73,12 @@ const ActiveCourses: React.FC = () => {
 
   if(loading) return 
 
+
   return (
     <div className="bg-[url('/imgs/banner.png')] md:w-full w-full h-[969px] md:h-[650px]">
       <div className="w-full pt-4 flex-col px-8 mx-auto max-w-screen-xl">
         <div className="mt-8 max-w-[630px]">
-          <span className="not-italic font-bold text-5xl text-white leading-9 line-clamp-2">
+          <span className="not-italic font-bold text-5xl text-white leading-9">
             {activeCourse.description || ""}
           </span>
         </div>
@@ -108,16 +110,16 @@ const ActiveCourses: React.FC = () => {
 
             <div className="flex items-center max-w-[630px] h-20">
               <a
-                href="/page"
+                href={activeCourse.url}
                 target="_blank"
-                className="bg-[#FF7112] rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white mr-3 font-sans"
+                className="bg-[#FF7112] rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white mr-3 font-sans transition duration-300 hover:bg-orange-600"
               >
                  {activeCourse.price}
               </a>
               <a
                 href={activeCourse.url}
                 target="_blank"
-                className="border-orange-600 border rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white font-sans"
+                className="border-orange-600 border rounded-[2000px] p-3 not-italic font-bold text-base leading-5 text-white font-sans transition duration-300 hover:bg-orange-600"
                 rel="noreferrer"
               >
                 Saber mais
